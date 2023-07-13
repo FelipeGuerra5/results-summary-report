@@ -4,11 +4,12 @@ import getScoreData from '@/lib/getScoreData'
 
 export default async function Home() {
 
-  const scoreData: Data = JSON.parse( await getScoreData())
+  const res: string =  await getScoreData()
+  const scoreData: Array<Data> = JSON.parse(res)
   
   return (
     <main className={styles.main}>
-      <ResultDisplay {...scoreData}/>
+      <ResultDisplay params={{scoreData: scoreData}}/>
     </main>
   )
 }

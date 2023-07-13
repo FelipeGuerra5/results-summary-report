@@ -1,10 +1,14 @@
 import Styles from '../page.module.css'
 
-export default function ResultDisplay(params: Data) {
-  
-  console.log('COMPONENT LOGING PARAMS')
-  console.log(params)
-  
+type props = {
+  params: {
+    scoreData: Data[]
+  }
+}
+
+export default function ResultDisplay({params: {scoreData}}: props) {
+  scoreData.map(item => console.log(item.score))
+
   return (
     <>
     <div className={Styles.display}>

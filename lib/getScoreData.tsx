@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default async function getScoreData(): Promise<string> {
     const scoreData = [
         {
@@ -23,6 +21,7 @@ export default async function getScoreData(): Promise<string> {
           "icon": "./assets/images/icon-visual.svg"
         }
       ]
+      const res = JSON.stringify(scoreData)
 
-      return JSON.stringify(scoreData)
+      return res
 }
