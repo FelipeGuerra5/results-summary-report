@@ -1,6 +1,10 @@
 import Styles from '../page.module.css'
 
-export default function ResultDisplay() {
+export default function ResultDisplay(params: Data) {
+  
+  console.log('COMPONENT LOGING PARAMS')
+  console.log(params)
+  
   return (
     <>
     <div className={Styles.display}>
