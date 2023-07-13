@@ -21,7 +21,7 @@
   padding: 0% 5%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -31,7 +31,7 @@
   padding: 0% 5%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -53,19 +53,23 @@
   color: rgb(255, 221, 0); */
 }
 
-.memory {
+.memory {}
 
+.verbal {}
+
+.visual {}
+
+.but {
+  text-decoration-line: none;
+  color: black;
+  width: 90px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
 }
-
-.verbal {
-
-}
-
-.visual {
-
-}
-
 
 .p {
-  word-break:keep-all;
+  word-break: keep-all;
 }
