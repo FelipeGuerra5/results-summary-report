@@ -1,9 +1,10 @@
 .main {
   /* for the list items */
-  --light-red: hsl(0, 100%, 67%);
-  --orangey-yellow: hsl(39, 100%, 56%);
-  --green-teal: hsl(166, 100%, 37%);
-  --cobalt-blue: hsl(234, 85%, 45%);
+  --light-red: 0, 100%, 67%;
+  --orangey-yellow: 39, 100%, 56%;
+  --green-teal: 166, 100%, 37%;
+  --cobalt-blue: 234, 85%, 45%;
+  --opacity: 0.15;
   /* for the left card */
   --light-slate-blue: hsl(252, 100%, 67%);
   --light-royal-blue: hsl(241, 81%, 54%);
@@ -23,77 +24,181 @@
   justify-content: space-around;
   align-items: center;
 
+
 }
 
 .display {
   background-color: var(--white);
   border-radius: 15px;
+  height: 325px;
+  width: 500px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-evenly;
-  width: 50%;
-  height: 50%;
+  box-sizing: border-box;
 }
 
 .indicator {
-  height: 100%;
+  box-sizing: border-box;
+  padding: 5% 5%;
   width: 50%;
-  padding: 0% 5%;
   display: flex;
   border-radius: 15px;
-  background: linear-gradient(var(--cobalt-blue),
-      var(--dark-gray-blue));
-
+  background: linear-gradient(var(--light-slate-blue),
+      var(--light-royal-blue));
+  height: 100%;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+}
 
+
+.indicator h1 {
+  color: var(--pale-blue);
+}
+
+.indicator_title {
+  color: var(--light-lavender);
+  font-size: .90rem;
+  font-weight: 600;
+  font-size: medium;
+}
+
+.indicator_circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  background: linear-gradient(var(--violet-blue),
+      var(--light-royal-blue));
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.indicator_totalscore {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.indicator_byhundred {
+  color: var(--light-lavender);
+  font-size: .75rem;
+  text-align: center;
+}
+
+.great_avg {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.indicator_description {
+  color: var(--light-lavender);
+  font-size: .75rem;
+  font-weight: 500;
+  text-align: center;
 }
 
 .summary {
+  box-sizing: border-box;
   height: 100%;
   width: 50%;
-  padding: 0% 5%;
+  padding: 5% 5%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
+.summary_title {
+  width: 100%;
+  text-align: left;
+  font-size: medium;
+  color: var(--dark-gray-blue);
+}
+
 .summary ul {
-  height: 50%;
+  height: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.hability {
+  width: 100%;
+  font-size: small;
+  font-weight: 700;
 }
 
 .summary li {
   display: flex;
   justify-content: space-around;
   border-radius: 5px;
+  height: 15%;
+  align-items: center;
+  padding: 5px;
+  font-size: smaller;
+  justify-content: space-between;
 }
 
-.reaction {
-  /* background-color: rgba(255, 221, 0, 0.467);
-  color: rgb(255, 221, 0); */
+.Reaction {
+  background-color: hsla(var(--light-red), var(--opacity));
+  color: hsl(var(--light-red));
 }
 
-.memory {}
+.Memory {
+  background-color: hsla(var(--orangey-yellow), var(--opacity));
+  color: hsl(var(--orangey-yellow));
+}
 
-.verbal {}
+.Verbal {
+  background-color: hsla(var(--green-teal), var(--opacity));
+  color: hsl(var(--green-teal));
+}
 
-.visual {}
+.Visual {
+  background-color: hsla(var(--cobalt-blue), var(--opacity));
+  color: hsla(var(--cobalt-blue));
+}
 
-.but {
+.li_score_byhundred {
+  color: hsl(224, 30%, 27%, .7);
+  font-weight: 700;
+  font-size: small;
+}
+
+.points {
+  color: var(--dark-gray-blue);
+  font-weight: 600;
+  font-size: small;
+}
+
+.btt {
   text-decoration-line: none;
   color: black;
-  width: 90px;
-  height: 25px;
+  width: 90%;
+  height: 13%;
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+  font-size: small;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 25px;
+}
+
+.btt:hover {
+  background: linear-gradient(var(--light-slate-blue),
+      var(--light-royal-blue));
+  cursor: pointer;
 }
 
 .p {
