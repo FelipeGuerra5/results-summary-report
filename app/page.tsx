@@ -2,6 +2,7 @@ import styles from './page.module.css'
 import ResultDisplay from './components/ResultDisplay'
 import getScoreData from '@/lib/getScoreData'
 
+
 export default async function Home() {
 
   const res: string = await getScoreData()

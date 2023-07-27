@@ -1,6 +1,10 @@
 import Styles from '../page.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
+import reaction from '../../public/assets/images/icon-reaction.svg'
+import memory from '../../public/assets/images/icon-memory.svg'
+import verbal from '../../public/assets/images/icon-verbal.svg'
+import visual from '../../public/assets/images/icon-visual.svg'
 
 type props = {
   params: {
@@ -39,8 +43,7 @@ export default function ResultDisplay({ params: { scoreData } }: props) {
               const category = item.category
               return (
                 <li className={`Styles.${category}`} key={item.category}>
-                  <Image src="/icon-memory.png" alt={`Picture for ${item.category}`} width={20} height={20}></Image>
-                  {/* <img src={item.icon} /> */}
+                  <Image src={item.icon} alt={`Picture for ${item.category}`} width={25} height={25}></Image>
                   <span>{item.category.toUpperCase()}</span>
                   <span>{`${item.score}/100`}</span>
                 </li>
